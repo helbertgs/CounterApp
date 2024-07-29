@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CounterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button toolTip="Increment" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PL-79-7Gv">
+                                <rect key="frame" x="146.33333333333334" y="444.66666666666669" width="100.66666666666666" height="35"/>
+                                <accessibility key="accessibilityConfiguration" identifier="incrementButton"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Increment"/>
+                                <connections>
+                                    <action selector="incrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tQh-n4-2g7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQC-ze-8hb">
+                                <rect key="frame" x="142.33333333333334" y="487.66666666666669" width="108.33333333333334" height="35.000000000000057"/>
+                                <accessibility key="accessibilityConfiguration" identifier="decrementButton"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Decrement"/>
+                                <connections>
+                                    <action selector="decrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mw-dD-5oY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I87-EG-grY">
+                                <rect key="frame" x="191.33333333333334" y="415.66666666666669" width="10.333333333333343" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="counterLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WQC-ze-8hb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mu7-ME-Z92"/>
+                            <constraint firstItem="WQC-ze-8hb" firstAttribute="top" secondItem="9PL-79-7Gv" secondAttribute="bottom" constant="8" id="N53-0f-WA8"/>
+                            <constraint firstItem="I87-EG-grY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bRU-w5-UvS"/>
+                            <constraint firstItem="I87-EG-grY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lF1-dY-wob"/>
+                            <constraint firstItem="9PL-79-7Gv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdG-2A-dIm"/>
+                            <constraint firstItem="9PL-79-7Gv" firstAttribute="top" secondItem="I87-EG-grY" secondAttribute="bottom" constant="8" id="zrY-ZN-JRr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="I87-EG-grY" id="W55-AY-SjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
